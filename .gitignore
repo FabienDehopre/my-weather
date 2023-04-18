@@ -1,5 +1,5 @@
-# Created by https://www.toptal.com/developers/gitignore/api/dotnetcore,angular,rider
-# Edit at https://www.toptal.com/developers/gitignore?templates=dotnetcore,angular,rider
+# Created by https://www.toptal.com/developers/gitignore/api/dotnetcore,angular,rider,visualstudiocode
+# Edit at https://www.toptal.com/developers/gitignore?templates=dotnetcore,angular,rider,visualstudiocode
 
 ### Angular ###
 ## Angular ##
@@ -121,4 +121,23 @@ fabric.properties
 # Android studio 3.1+ serialized cache file
 .idea/caches/build_file_checksums.ser
 
-# End of https://www.toptal.com/developers/gitignore/api/dotnetcore,angular,rider
+### VisualStudioCode ###
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/*.code-snippets
+
+# Local History for Visual Studio Code
+.history/
+
+# Built Visual Studio Code Extensions
+*.vsix
+
+### VisualStudioCode Patch ###
+# Ignore all local history of files
+.history
+.ionide
+
+# End of https://www.toptal.com/developers/gitignore/api/dotnetcore,angular,rider,visualstudiocode
