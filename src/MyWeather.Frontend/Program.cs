@@ -1,3 +1,4 @@
+using Duende.Bff.Yarp;
 using Microsoft.IdentityModel.Protocols.OpenIdConnect;
  
 var builder = WebApplication.CreateBuilder(args);
@@ -44,7 +45,7 @@ builder.Services
     });
  
 // Register BFF services and configure the BFF middleware
-builder.Services.AddBff().AddServerSideSessions();
+builder.Services.AddBff().AddRemoteApis().AddServerSideSessions();
 builder.Services.AddAuthorization();
  
 var app = builder.Build();
@@ -57,7 +58,7 @@ if (app.Environment.IsDevelopment())
 }
  
 app.UseHttpsRedirection();
-
+app.UseDefaultFiles();
 app.UseStaticFiles();
  
 app.UseAuthentication();
