@@ -42,6 +42,12 @@ builder.Services
         options.Scope.Add("openid");
         options.Scope.Add("profile");
         options.Scope.Add("offline_access");
+
+        options.Events.OnRedirectToIdentityProviderForSignOut = ctx =>
+        {
+            ctx.ProtocolMessage.IssuerAddress = $"https://{builder.Configuration["Auth0:Authority"]}/v2/logout?returnTo=https://localhost:7293/&client_id={builder.Configuration["Auth0:ClientId"]}";
+            return Task.CompletedTask;
+        };
     });
  
 // Register BFF services and configure the BFF middleware
