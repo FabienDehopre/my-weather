@@ -1,2 +1,6 @@
+<h1>User Claims</h1>
 <pre>{{ user | json }}</pre>
+<h1>Weather Forecast</h1>
+<pre>{{ weatherForecast | json }}</pre>
+<button type="button" (click)="loadWeatherForecast()">Load weather data</button>
 <button type="button" (click)="logout()">Logout</button>
